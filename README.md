@@ -69,7 +69,33 @@ Em seguida inicie o Windows PowerShell
 
 
 
-[![print-11.png](https://i.postimg.cc/Th8xLG7L/print-11.png)](https://postimg.cc/y3Tt2qzs)
+[![print-11.png](https://i.postimg.cc/Th8xLG7L/print-11.png)](https://postimg.cc/y3Tt2qzs)  
+
+Criar um container  
+pwd (anotar [caminho])  
+docker run -v [caminho]:/impacta --name aula_devops -it python:3.6 bash  
+Caso você tenha o problema: "the input device is not a TTY. If you are using mintty, try prefixing the command with 'winpty'"  
+winpty docker run -v [caminho]:/impacta --name aula_devops -it python:3.6 bash  
+
+Rodar um container  
+docker start -ai aula_devops  
+
+Instalar pacotes - Dentro do Container  
+apt update  
+apt -y install git ne  
+
+Apagar um container  
+docker rm aula_devops  
+
+PARTE 3 - Configurando o shell  
+Dentro do container clonar esse projeto  
+
+Rodar o script prompt_setup.sh  
+
+Lembrando que caso crie o container essa configuração deve ser refeita    
+
+---------------------------------------------------------------------------------------  
+***Fonte: Professor Thiago Kuma - Faculdade Impacta / https://github.com/thkuma/docker_linux***  
 
 
 
